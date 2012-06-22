@@ -7,7 +7,7 @@ Dir[File.join(dir, 'hu_*.rb')].each {|file| require File.basename(file) }
 
 module Rubyhu
     def self.snapshot
-      output = "" + (Rubyhu::Hu_Plugin.repository).to_s
+      output = ""
       Rubyhu::Hu_Plugin.repository.each { |plugin|
         output = output + plugin.get_data
       }

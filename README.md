@@ -24,8 +24,8 @@ Well there is two things you can do. You can run it like a champ with the `rubyh
 
 There are two commands right now. 
 
-1. `rubyhu snap` will use every installed plugin to collect information about the current state of your machine. Use this to 
-2. `rubyhu note [subject] [body]` takes two strings and creates a note in the `notes` directory with the name `[subject].txt`. *NB:* if you already have a note with that name, there will be a dialog asking if you want to overwrite. See the wishlist for more details.
+1. `rubyhu snap` will use every installed plugin it has to collect information about the current state of your machine.
+2. `rubyhu note [subject] [body]` takes two strings and creates a file in the `notes` directory with the name `[subject].txt` (*NB:* if you already have a note with that name, there will be a dialog asking if you want to overwrite. See the wishlist for more details.)
 
 ###How to add plugins
 
@@ -45,14 +45,16 @@ module Rubyhu
 end
 ```
 
-Firstly, three big things: our plugin is part of the module `Rubyhu`, it extends `HuPlugin`, and it has the method `self.get_data`. All three of those are necessary. Everything else is up to you. Especially that part that says 'Your code'. You can go wild in there.  
+Firstly, three big things: our plugin is part of the module `Rubyhu`, it extends `HuPlugin`, and it has the method `self.get_data`. All three of those are necessary. Everything else is up to you. Especially that part that says 'Your code'. You can go hog-wild in there.  
 
-Once you're done, your plugin will be added to the group just by being a part of the list. You will have to recompile the gem, but other than that you're set. 
+Once you're done, your plugin will be added to the group just by being a part of the list. Run `rubyhu snap` and see if your output is there.
 
 ## Wishlist
 
 **A plugin install feature:** Wouldn't that be dreamy? You type
+
     $ rubuhu install plugin_name
+
 and it adds your very own plugin, no problemo. That doesn't happen right now, but it should! 
 
 **Note Update:** What are we sending, an email? What's up with that subject line? It should be a timestamp, that way there is no chance of accidentally overwriting a previous note. 
