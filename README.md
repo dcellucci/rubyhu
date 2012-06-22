@@ -1,7 +1,8 @@
 # Rubyhu
 
 Rubyhu watches what you do and takes notes. But in ruby. 
-I like python, but I like ruby more. I also like [scottjacksonx](https://github.com/scottjacksonx)'s [hu project](https://github.com/scottjacksonx/hu), so I decided to rewrite it in ruby and make it available to everyone. 
+
+I like python, but I like ruby more. I also like [scottjacksonx](https://github.com/scottjacksonx)'s [hu project](https://github.com/scottjacksonx/hu), so I decided to rewrite it in ruby and post it up here for everyone.
 
 ## Installation
 
@@ -19,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-Running `rubyhu snap` will get you started. More on that later. 
+Running `rubyhu snap` will get you started. Probably. I'm still working on it. 
  
 ## Contributing
 
