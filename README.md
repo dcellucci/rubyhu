@@ -20,12 +20,14 @@ Or install it yourself as:
 
 ## Usage
 
-Well there is two things you can do. You can run it like a champ with the `rubyhu` command, or you can download the source and add some plugins. Don't be shy. It's easier than it looks. 
+Now that you mention it, yes, there's two things you can do right now with *Rubyhu*. You can run it like a champ by typing the `rubyhu snap` command in your terminal, or you can download the source and add some plugins. Don't be shy. It's easier than it looks, and any additional functionality would be awesome.
 
 There are two commands right now. 
 
-1. `rubyhu snap` will use every installed plugin it has to collect information about the current state of your machine.
+1. `rubyhu snap` will use every installed plugin it has to collect information about the current state of your machine. Temperature, power, current windows, current tabs. You name it. 
 2. `rubyhu note [subject] [body]` takes two strings and creates a file in the `notes` directory with the name `[subject].txt` (*NB:* if you already have a note with that name, there will be a dialog asking if you want to overwrite. See the wishlist for more details.)
+
+If you just want to capture basic information, you can stop here. If you are interested in making rubyhu better (and who isn't?), keep reading to find out…
 
 ###How to add plugins
 
@@ -45,9 +47,9 @@ module Rubyhu
 end
 ```
 
-Firstly, three big things: our plugin is part of the module `Rubyhu`, it extends `HuPlugin`, and it has the method `self.get_data`. All three of those are necessary. Everything else is up to you. Especially that part that says 'Your code'. You can go hog-wild in there.  
+Take note of three big things: our plugin is part of the module `Rubyhu`, it extends `HuPlugin`, and it has the method `self.get_data`. All three of those are necessary. Everything else is up to you. Especially that part that says 'Your code'. You can go hog-wild in there.  
 
-Once you're done, your plugin will be added to the group just by being a part of the list. Run `rubyhu snap` and see if your output is there.
+Once you're done, your plugin will be added to the group just by being a part of the list. Run `rubyhu snap` and see if your output is there. 
 
 ## Wishlist
 

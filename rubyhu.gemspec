@@ -15,6 +15,9 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.version       = Rubyhu::VERSION
   gem.add_dependency  "thor"
+  gem.add_dependency  "json"
+  gem.add_dependency  "google-weather"
+
 
   gem.add_development_dependency "rspec", "~> 2.6"
   gem.add_development_dependency "cucumber"
